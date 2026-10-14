@@ -33,6 +33,7 @@ app = FastAPI(
 
 # CORS configuration
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -43,7 +44,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # Register routers under /api
 app.include_router(auth_router, prefix="/api")
