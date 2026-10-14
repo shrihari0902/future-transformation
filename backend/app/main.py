@@ -32,13 +32,18 @@ app = FastAPI(
 )
 
 # CORS configuration
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://future-transformation-sigma.vercel.app",
+        "https://future-transformation-git-main-hari-3820.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Register routers under /api
 app.include_router(auth_router, prefix="/api")
