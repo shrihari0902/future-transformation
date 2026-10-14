@@ -1,4 +1,3 @@
-```python
 from urllib.parse import unquote, urlparse
 
 import pymysql
@@ -99,4 +98,3 @@ def get_db():
         yield db
     finally:
         db.close()
-```
